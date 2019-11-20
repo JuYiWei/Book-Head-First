@@ -1,0 +1,408 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+    
+  第 3 章 装饰器模式 - 
+  
+  </title>
+ <meta name="description" content="">
+ <link href="atom.xml" rel="alternate" title="" type="application/atom+xml">
+    <link rel="stylesheet" href="asset/css/foundation.min.css" />
+    <link rel="stylesheet" href="asset/css/docs.css" />
+
+    <script src="asset/js/vendor/modernizr.js"></script>
+    <script src="asset/js/vendor/jquery.js"></script>
+    <script src="asset/highlightjs/highlight.pack.js"></script>
+    <link href="asset/highlightjs/styles/github.css" media="screen, projection" rel="stylesheet" type="text/css">
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+  </head>
+  <body class="antialiased hide-extras">
+    
+    <div class="marketing off-canvas-wrap" data-offcanvas>
+      <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+
+<div id="header">
+    <h1><a href="index.html"></a></h1>
+</div>
+
+</nav>
+        <nav class="tab-bar show-for-small">
+  <a href="javascript:void(0)" class="left-off-canvas-toggle menu-icon">
+    <span> &nbsp; </span>
+  </a>
+</nav>
+
+<aside class="left-off-canvas-menu">
+      <ul class="off-canvas-list">
+      <li><a href="index.html">Home</a></li>
+      
+        <li class="divider"></li>
+        <li><label>目录</label></li>
+
+          
+            <li><a title="总结" href="%E3%80%90Head%20Frist%20%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E3%80%91%E6%80%BB%E7%BB%93.html">总结</a></li>
+          
+            <li><a title="第 1 章 策略模式" href="%E3%80%90Head%20Frist%20%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E3%80%91%E7%AC%AC%201%20%E7%AB%A0%20%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F.html">第 1 章 策略模式</a></li>
+          
+            <li><a title="第 2 章 观察者模式" href="%E3%80%90Head%20Frist%20%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E3%80%91%E7%AC%AC%202%20%E7%AB%A0%20%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F.html">第 2 章 观察者模式</a></li>
+          
+            <li><a title="第 3 章 装饰器模式" href="%E3%80%90Head%20Frist%20%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E3%80%91%E7%AC%AC%203%20%E7%AB%A0%20%E8%A3%85%E9%A5%B0%E5%99%A8%E6%A8%A1%E5%BC%8F.html">第 3 章 装饰器模式</a></li>
+          
+
+      
+      </ul>
+    </aside>
+
+<a class="exit-off-canvas" href="#"></a>
+
+        <section id="main-content" role="main" class="scroll-container">
+
+          <div class="row">
+            <div class="large-3 medium-3 columns">
+              <div class="hide-for-small">
+                <div class="sidebar">
+                <nav>
+                  <ul id="side-nav" class="side-nav">
+
+                    
+                      <li class="side-title"><span>目录</span></li>
+                        
+                          <li><a title="总结" href="%E3%80%90Head%20Frist%20%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E3%80%91%E6%80%BB%E7%BB%93.html">总结</a></li>
+                        
+                          <li><a title="第 1 章 策略模式" href="%E3%80%90Head%20Frist%20%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E3%80%91%E7%AC%AC%201%20%E7%AB%A0%20%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F.html">第 1 章 策略模式</a></li>
+                        
+                          <li><a title="第 2 章 观察者模式" href="%E3%80%90Head%20Frist%20%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E3%80%91%E7%AC%AC%202%20%E7%AB%A0%20%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F.html">第 2 章 观察者模式</a></li>
+                        
+                          <li><a title="第 3 章 装饰器模式" href="%E3%80%90Head%20Frist%20%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E3%80%91%E7%AC%AC%203%20%E7%AB%A0%20%E8%A3%85%E9%A5%B0%E5%99%A8%E6%A8%A1%E5%BC%8F.html">第 3 章 装饰器模式</a></li>
+                        
+
+                    
+                  </ul>
+                </nav>
+                </div>
+              </div>
+            </div>
+            <div class="large-9 medium-9 columns">
+
+ <div class="markdown-body">
+<h1>第 3 章 装饰器模式</h1>
+
+<ul>
+<li>
+<a href="#toc_0">一、基础</a>
+</li>
+<li>
+<a href="#toc_1">二、实践</a>
+<ul>
+<li>
+<a href="#toc_2">2.1 需求</a>
+</li>
+<li>
+<a href="#toc_3">2.2 代码</a>
+</li>
+</ul>
+</li>
+</ul>
+
+
+<h2 id="toc_0">一、基础</h2>
+
+<pre><code>动态地将责任附加到对象上
+想要扩展功能，装饰者提供有别于继承到另一种选择
+</code></pre>
+
+<h2 id="toc_1">二、实践</h2>
+
+<h3 id="toc_2">2.1 需求</h3>
+
+<pre><code>咖啡馆点单，商品价格计算
+
+主要分类：咖啡、奶茶、星冰乐。。。
+配料：摩卡、牛奶、糖。。。
+
+迭代
+增加杯型：小杯、大杯
+</code></pre>
+
+<h3 id="toc_3">2.2 代码</h3>
+
+<ul>
+<li>Beverage</li>
+</ul>
+
+<pre><code>// 饮料
+@interface Beverage : NSObject
+
+// 名称
+@property (nonatomic, copy) NSString *name;
+
+// 价格
+- (float)coast;
+
+@end
+
+
+@implementation Beverage
+
+- (NSString *)name {
+    return @&quot;&quot;;
+}
+
+- (float)coast {
+    return 0.0;
+}
+
+@end
+</code></pre>
+
+<ul>
+<li>CondimentDecorator</li>
+</ul>
+
+<pre><code>// 配料装饰器
+@interface CondimentDecorator : Beverage
+
+- (instancetype)initWithBeverage:(Beverage *)beverage;
+
+@property (nonatomic, strong) Beverage *tempBeverage;
+
+@end
+
+
+@implementation CondimentDecorator
+
+- (instancetype)initWithBeverage:(Beverage *)beverage {
+    self = [super init];
+    if (self) {
+        self.tempBeverage = beverage;
+    }
+    return self;
+}
+
+@end
+</code></pre>
+
+<ul>
+<li>Category</li>
+</ul>
+
+<pre><code>// 深度烘焙，基础款 11 元
+@interface DarkRoast : Beverage
+
+@end
+
+
+@implementation DarkRoast
+
+- (NSString *)name {
+    return @&quot;深度烘培&quot;;
+}
+
+- (float)coast {
+    return 11.0;
+}
+
+@end
+
+
+-----
+
+
+// 奶茶，基础款 8 元
+@interface MileTee : Beverage
+
+@end
+
+
+@implementation MileTee
+
+- (NSString *)name {
+    return @&quot;奶茶&quot;;
+}
+
+- (float)coast {
+    return 8.0;
+}
+</code></pre>
+
+<ul>
+<li>Condiment</li>
+</ul>
+
+<pre><code>// 摩卡：+2 元/份
+@interface Mocha : CondimentDecorator
+
+@end
+
+
+@implementation Mocha
+
+- (NSString *)name {
+    return [NSString stringWithFormat:@&quot;%@+%@&quot;, self.tempBeverage.name, @&quot;摩卡&quot;];
+}
+
+- (float)coast {
+    return self.tempBeverage.coast + 2.;
+}
+
+@end
+
+
+---
+
+
+// 牛奶：+3 元/份
+@interface Milk : CondimentDecorator
+
+@end
+
+
+@implementation Milk
+
+- (NSString *)name {
+    return [NSString stringWithFormat:@&quot;%@+%@&quot;, self.tempBeverage.name, @&quot;牛奶&quot;];
+}
+
+- (float)coast {
+    return self.tempBeverage.coast + 3.;
+}
+
+@end
+</code></pre>
+
+<ul>
+<li>CupSize</li>
+</ul>
+
+<pre><code>// 小杯 +1 元
+@interface CupSizeSmall : CondimentDecorator
+
+@end
+
+
+@implementation CupSizeSmall
+
+- (NSString *)name {
+    return [NSString stringWithFormat:@&quot;%@+%@&quot;, self.tempBeverage.name, @&quot;小杯&quot;];
+}
+
+- (float)coast {
+    return self.tempBeverage.coast + 1.;
+}
+
+@end
+
+
+-------
+
+
+// 大杯 +2 元
+@interface CupSizeBig : CondimentDecorator
+
+@end
+
+
+@implementation CupSizeBig
+
+- (NSString *)name {
+    return [NSString stringWithFormat:@&quot;%@+%@&quot;, self.tempBeverage.name, @&quot;大杯&quot;];
+}
+
+- (float)coast {
+    return self.tempBeverage.coast + 2.;
+}
+
+@end
+</code></pre>
+
+<ul>
+<li>使用</li>
+</ul>
+
+<pre><code>    Beverage *darkRoast = [[DarkRoast alloc] init];
+    darkRoast = [[Mocha alloc] initWithBeverage:darkRoast];
+    darkRoast = [[Mocha alloc] initWithBeverage:darkRoast];
+    darkRoast = [[Milk alloc] initWithBeverage:darkRoast];
+    darkRoast = [[CupSizeBig alloc] initWithBeverage:darkRoast];
+    
+    NSLog(@&quot;\n%@\n价格：%.2f&quot;, darkRoast.name, darkRoast.coast);
+</code></pre>
+
+
+</div>
+
+<br /><br />
+<hr />
+
+<div class="row clearfix">
+  <div class="large-6 columns">
+	<div class="text-left" style="padding:15px 0px;">
+		
+	        <a href="%E3%80%90Head%20Frist%20%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E3%80%91%E7%AC%AC%202%20%E7%AB%A0%20%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F.html"  title="Previous Post: 第 2 章 观察者模式">&laquo; 第 2 章 观察者模式</a>
+	    
+	</div>
+  </div>
+  <div class="large-6 columns">
+	<div class="text-right" style="padding:15px 0px;">
+		
+	</div>
+  </div>
+</div>
+
+<div class="row">
+<div style="padding:0px 0.93em;" class="share-comments">
+
+</div>
+</div>
+<script type="text/javascript">
+	$(function(){
+		var currentURL = '%E3%80%90Head%20Frist%20%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E3%80%91%E7%AC%AC%203%20%E7%AB%A0%20%E8%A3%85%E9%A5%B0%E5%99%A8%E6%A8%A1%E5%BC%8F.html';
+		$('#side-nav a').each(function(){
+			if($(this).attr('href') == currentURL){
+				$(this).parent().addClass('active');
+			}
+		});
+	});
+</script>  
+</div></div>
+
+
+<div class="page-bottom">
+  <div class="row">
+  <hr />
+  <div class="small-9 columns">
+  <p class="copyright">Copyright &copy; 2019
+Powered by <a target="_blank" href="http://www.mweb.im">MWeb</a>,&nbsp; 
+Theme used <a target="_blank" href="http://github.com">JRSCZ CSS</a>.</p>
+  </div>
+  <div class="small-3 columns">
+  <p class="copyright text-right"><a href="#header">TOP</a></p>
+  </div>
+   
+  </div>
+</div>
+
+        </section>
+      </div>
+    </div>
+    
+    
+    <script src="asset/js/foundation.min.js"></script>
+    <script src="asset/js/foundation/foundation.offcanvas.js"></script>
+    <script>
+      $(document).foundation();
+
+     
+    </script>
+    
+
+
+  </body>
+</html>

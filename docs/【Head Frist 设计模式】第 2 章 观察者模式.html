@@ -1,0 +1,282 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+    
+  第 2 章 观察者模式 - 
+  
+  </title>
+ <meta name="description" content="">
+ <link href="atom.xml" rel="alternate" title="" type="application/atom+xml">
+    <link rel="stylesheet" href="asset/css/foundation.min.css" />
+    <link rel="stylesheet" href="asset/css/docs.css" />
+
+    <script src="asset/js/vendor/modernizr.js"></script>
+    <script src="asset/js/vendor/jquery.js"></script>
+    <script src="asset/highlightjs/highlight.pack.js"></script>
+    <link href="asset/highlightjs/styles/github.css" media="screen, projection" rel="stylesheet" type="text/css">
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+  </head>
+  <body class="antialiased hide-extras">
+    
+    <div class="marketing off-canvas-wrap" data-offcanvas>
+      <div class="inner-wrap">
+
+
+<nav class="top-bar docs-bar hide-for-small" data-topbar>
+
+<div id="header">
+    <h1><a href="index.html"></a></h1>
+</div>
+
+</nav>
+        <nav class="tab-bar show-for-small">
+  <a href="javascript:void(0)" class="left-off-canvas-toggle menu-icon">
+    <span> &nbsp; </span>
+  </a>
+</nav>
+
+<aside class="left-off-canvas-menu">
+      <ul class="off-canvas-list">
+      <li><a href="index.html">Home</a></li>
+      
+        <li class="divider"></li>
+        <li><label>目录</label></li>
+
+          
+            <li><a title="总结" href="%E3%80%90Head%20Frist%20%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E3%80%91%E6%80%BB%E7%BB%93.html">总结</a></li>
+          
+            <li><a title="第 1 章 策略模式" href="%E3%80%90Head%20Frist%20%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E3%80%91%E7%AC%AC%201%20%E7%AB%A0%20%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F.html">第 1 章 策略模式</a></li>
+          
+            <li><a title="第 2 章 观察者模式" href="%E3%80%90Head%20Frist%20%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E3%80%91%E7%AC%AC%202%20%E7%AB%A0%20%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F.html">第 2 章 观察者模式</a></li>
+          
+            <li><a title="第 3 章 装饰器模式" href="%E3%80%90Head%20Frist%20%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E3%80%91%E7%AC%AC%203%20%E7%AB%A0%20%E8%A3%85%E9%A5%B0%E5%99%A8%E6%A8%A1%E5%BC%8F.html">第 3 章 装饰器模式</a></li>
+          
+
+      
+      </ul>
+    </aside>
+
+<a class="exit-off-canvas" href="#"></a>
+
+        <section id="main-content" role="main" class="scroll-container">
+
+          <div class="row">
+            <div class="large-3 medium-3 columns">
+              <div class="hide-for-small">
+                <div class="sidebar">
+                <nav>
+                  <ul id="side-nav" class="side-nav">
+
+                    
+                      <li class="side-title"><span>目录</span></li>
+                        
+                          <li><a title="总结" href="%E3%80%90Head%20Frist%20%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E3%80%91%E6%80%BB%E7%BB%93.html">总结</a></li>
+                        
+                          <li><a title="第 1 章 策略模式" href="%E3%80%90Head%20Frist%20%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E3%80%91%E7%AC%AC%201%20%E7%AB%A0%20%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F.html">第 1 章 策略模式</a></li>
+                        
+                          <li><a title="第 2 章 观察者模式" href="%E3%80%90Head%20Frist%20%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E3%80%91%E7%AC%AC%202%20%E7%AB%A0%20%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F.html">第 2 章 观察者模式</a></li>
+                        
+                          <li><a title="第 3 章 装饰器模式" href="%E3%80%90Head%20Frist%20%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E3%80%91%E7%AC%AC%203%20%E7%AB%A0%20%E8%A3%85%E9%A5%B0%E5%99%A8%E6%A8%A1%E5%BC%8F.html">第 3 章 装饰器模式</a></li>
+                        
+
+                    
+                  </ul>
+                </nav>
+                </div>
+              </div>
+            </div>
+            <div class="large-9 medium-9 columns">
+
+ <div class="markdown-body">
+<h1>第 2 章 观察者模式</h1>
+
+<ul>
+<li>
+<a href="#toc_0">一、基础</a>
+</li>
+<li>
+<a href="#toc_1">二、实践</a>
+<ul>
+<li>
+<a href="#toc_2">2.1 需求</a>
+</li>
+<li>
+<a href="#toc_3">2.2 代码</a>
+</li>
+</ul>
+</li>
+</ul>
+
+
+<h2 id="toc_0">一、基础</h2>
+
+<pre><code>在对象之间定义一对多的依赖，
+这样一来
+当一个对象改变状态，依赖它的对象都会收到通知
+并自动更新
+</code></pre>
+
+<h2 id="toc_1">二、实践</h2>
+
+<h3 id="toc_2">2.1 需求</h3>
+
+<pre><code>设计天气信息实时刷新
+
+天气监测站会按时推送信息（天气，温度）
+需要一个软件，接受信息，并展示 3 个信息面板
+要求可以实时刷新
+
+迭代：
+补充信息：气压
+新增一个信息面板
+</code></pre>
+
+<h3 id="toc_3">2.2 代码</h3>
+
+<ul>
+<li>WeatherStation</li>
+</ul>
+
+<pre><code>@interface WeatherStation : NSObject
+
+// 模拟连接
+- (void)connect;
+
+@end
+
+
+NSString *const WeatherStationInfoChangeNotification = @&quot;WeatherStationNotification&quot;;
+
+@implementation WeatherStation
+
+- (void)connect {
+    [self testSendWeatherInfo];
+}
+
+- (void)testSendWeatherInfo {
+    NSDictionary *weatherInfo = @{@&quot;weather&quot;:@&quot;大雪&quot;, @&quot;temperature&quot;:@(arc4random()%50)};
+    [[NSNotificationCenter defaultCenter] postNotificationName:WeatherStationInfoChangeNotification object:nil userInfo:weatherInfo];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self testSendWeatherInfo];
+    });
+}
+
+@end
+</code></pre>
+
+<ul>
+<li>使用</li>
+</ul>
+
+<pre><code>@interface ViewController ()
+
+@property (nonatomic, strong) WeatherStation *weatherStation;
+
+@end
+
+@implementation ViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(weatherInfoChange:) name:WeatherStationInfoChangeNotification object:nil];
+    
+    self.weatherStation = [[WeatherStation alloc] init];
+    [self.weatherStation connect];
+}
+
+- (void)weatherInfoChange:(NSNotification *)n {
+    NSDictionary *dic = n.userInfo;
+    NSString *weather = dic[@&quot;weather&quot;];
+    NSNumber *temperature = dic[@&quot;temperature&quot;];
+    
+    NSLog(@&quot;weather:%@&quot;, weather);
+    NSLog(@&quot;temperature:%@&quot;, temperature);
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:WeatherStationInfoChangeNotification object:nil];
+}
+
+@end
+</code></pre>
+
+
+</div>
+
+<br /><br />
+<hr />
+
+<div class="row clearfix">
+  <div class="large-6 columns">
+	<div class="text-left" style="padding:15px 0px;">
+		
+	        <a href="%E3%80%90Head%20Frist%20%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E3%80%91%E7%AC%AC%201%20%E7%AB%A0%20%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F.html"  title="Previous Post: 第 1 章 策略模式">&laquo; 第 1 章 策略模式</a>
+	    
+	</div>
+  </div>
+  <div class="large-6 columns">
+	<div class="text-right" style="padding:15px 0px;">
+		
+	        <a href="%E3%80%90Head%20Frist%20%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E3%80%91%E7%AC%AC%203%20%E7%AB%A0%20%E8%A3%85%E9%A5%B0%E5%99%A8%E6%A8%A1%E5%BC%8F.html" 
+	        title="Next Post: 第 3 章 装饰器模式">第 3 章 装饰器模式 &raquo;</a>
+	    
+	</div>
+  </div>
+</div>
+
+<div class="row">
+<div style="padding:0px 0.93em;" class="share-comments">
+
+</div>
+</div>
+<script type="text/javascript">
+	$(function(){
+		var currentURL = '%E3%80%90Head%20Frist%20%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E3%80%91%E7%AC%AC%202%20%E7%AB%A0%20%E8%A7%82%E5%AF%9F%E8%80%85%E6%A8%A1%E5%BC%8F.html';
+		$('#side-nav a').each(function(){
+			if($(this).attr('href') == currentURL){
+				$(this).parent().addClass('active');
+			}
+		});
+	});
+</script>  
+</div></div>
+
+
+<div class="page-bottom">
+  <div class="row">
+  <hr />
+  <div class="small-9 columns">
+  <p class="copyright">Copyright &copy; 2019
+Powered by <a target="_blank" href="http://www.mweb.im">MWeb</a>,&nbsp; 
+Theme used <a target="_blank" href="http://github.com">JRSCZ CSS</a>.</p>
+  </div>
+  <div class="small-3 columns">
+  <p class="copyright text-right"><a href="#header">TOP</a></p>
+  </div>
+   
+  </div>
+</div>
+
+        </section>
+      </div>
+    </div>
+    
+    
+    <script src="asset/js/foundation.min.js"></script>
+    <script src="asset/js/foundation/foundation.offcanvas.js"></script>
+    <script>
+      $(document).foundation();
+
+     
+    </script>
+    
+
+
+  </body>
+</html>
