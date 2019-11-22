@@ -1,0 +1,754 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8453EA3D23862BF500E23306 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8453EA3C23862BF500E23306 /* AppDelegate.m */; };
+		8453EA4023862BF500E23306 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8453EA3F23862BF500E23306 /* SceneDelegate.m */; };
+		8453EA4323862BF500E23306 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8453EA4223862BF500E23306 /* ViewController.m */; };
+		8453EA4623862BF500E23306 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8453EA4423862BF500E23306 /* Main.storyboard */; };
+		8453EA4823862BF700E23306 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8453EA4723862BF700E23306 /* Assets.xcassets */; };
+		8453EA4B23862BF700E23306 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8453EA4923862BF700E23306 /* LaunchScreen.storyboard */; };
+		8453EA4E23862BF700E23306 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8453EA4D23862BF700E23306 /* main.m */; };
+		8453EA5823862BF700E23306 /* FactoryModeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8453EA5723862BF700E23306 /* FactoryModeTests.m */; };
+		8453EA6323862BF700E23306 /* FactoryModeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8453EA6223862BF700E23306 /* FactoryModeUITests.m */; };
+		8453EA7523863BD300E23306 /* Pizza.m in Sources */ = {isa = PBXBuildFile; fileRef = 8453EA7423863BD300E23306 /* Pizza.m */; };
+		8453EA7823863BE000E23306 /* PizzaStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8453EA7723863BE000E23306 /* PizzaStore.m */; };
+		8453EA7B23863D4C00E23306 /* HZPizzaStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8453EA7A23863D4C00E23306 /* HZPizzaStore.m */; };
+		8453EA7E23863D5300E23306 /* SCPizzaStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 8453EA7D23863D5300E23306 /* SCPizzaStore.m */; };
+		84CBCA7A2386602C0078773D /* PizzaFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CBCA792386602C0078773D /* PizzaFactory.m */; };
+		84CBCA7E2386635F0078773D /* CheesePizza.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CBCA7D2386635F0078773D /* CheesePizza.m */; };
+		84CBCA812386636D0078773D /* VeggiePizza.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CBCA802386636D0078773D /* VeggiePizza.m */; };
+		84CBCA8423867AD20078773D /* HZCheesePizza.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CBCA8323867AD20078773D /* HZCheesePizza.m */; };
+		84CBCA8723867ADC0078773D /* HZVeggiePizza.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CBCA8623867ADC0078773D /* HZVeggiePizza.m */; };
+		84CBCA8A238684610078773D /* SCCheesePizza.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CBCA89238684610078773D /* SCCheesePizza.m */; };
+		84CBCA8D2386846E0078773D /* SCVeggiePizza.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CBCA8C2386846E0078773D /* SCVeggiePizza.m */; };
+		84CBCA91238687F20078773D /* PizzaMaterialAbstractFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CBCA90238687F20078773D /* PizzaMaterialAbstractFactory.m */; };
+		84CBCA94238689110078773D /* HZPizzaMaterialAbstractFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CBCA93238689110078773D /* HZPizzaMaterialAbstractFactory.m */; };
+		84CBCA9723868A280078773D /* SCPizzaMaterialAbstractFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CBCA9623868A280078773D /* SCPizzaMaterialAbstractFactory.m */; };
+		84CBCA9B23868B850078773D /* Cheese.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CBCA9A23868B850078773D /* Cheese.m */; };
+		84CBCAA123868D8B0078773D /* Veggie.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CBCAA023868D8B0078773D /* Veggie.m */; };
+		84CBCAA423868EFE0078773D /* HZCheese.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CBCAA323868EFE0078773D /* HZCheese.m */; };
+		84CBCAA723868FC40078773D /* SCVeggie.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CBCAA623868FC40078773D /* SCVeggie.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8453EA5423862BF700E23306 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8453EA3023862BF500E23306 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8453EA3723862BF500E23306;
+			remoteInfo = FactoryMode;
+		};
+		8453EA5F23862BF700E23306 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8453EA3023862BF500E23306 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8453EA3723862BF500E23306;
+			remoteInfo = FactoryMode;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8453EA3823862BF500E23306 /* FactoryMode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FactoryMode.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8453EA3B23862BF500E23306 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8453EA3C23862BF500E23306 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8453EA3E23862BF500E23306 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		8453EA3F23862BF500E23306 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		8453EA4123862BF500E23306 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		8453EA4223862BF500E23306 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8453EA4523862BF500E23306 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8453EA4723862BF700E23306 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8453EA4A23862BF700E23306 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8453EA4C23862BF700E23306 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8453EA4D23862BF700E23306 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8453EA5323862BF700E23306 /* FactoryModeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FactoryModeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8453EA5723862BF700E23306 /* FactoryModeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FactoryModeTests.m; sourceTree = "<group>"; };
+		8453EA5923862BF700E23306 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8453EA5E23862BF700E23306 /* FactoryModeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FactoryModeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8453EA6223862BF700E23306 /* FactoryModeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FactoryModeUITests.m; sourceTree = "<group>"; };
+		8453EA6423862BF700E23306 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8453EA7323863BD300E23306 /* Pizza.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Pizza.h; sourceTree = "<group>"; };
+		8453EA7423863BD300E23306 /* Pizza.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Pizza.m; sourceTree = "<group>"; };
+		8453EA7623863BE000E23306 /* PizzaStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PizzaStore.h; sourceTree = "<group>"; };
+		8453EA7723863BE000E23306 /* PizzaStore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PizzaStore.m; sourceTree = "<group>"; };
+		8453EA7923863D4C00E23306 /* HZPizzaStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZPizzaStore.h; sourceTree = "<group>"; };
+		8453EA7A23863D4C00E23306 /* HZPizzaStore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZPizzaStore.m; sourceTree = "<group>"; };
+		8453EA7C23863D5300E23306 /* SCPizzaStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCPizzaStore.h; sourceTree = "<group>"; };
+		8453EA7D23863D5300E23306 /* SCPizzaStore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCPizzaStore.m; sourceTree = "<group>"; };
+		84CBCA782386602C0078773D /* PizzaFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PizzaFactory.h; sourceTree = "<group>"; };
+		84CBCA792386602C0078773D /* PizzaFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PizzaFactory.m; sourceTree = "<group>"; };
+		84CBCA7C2386635F0078773D /* CheesePizza.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CheesePizza.h; sourceTree = "<group>"; };
+		84CBCA7D2386635F0078773D /* CheesePizza.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CheesePizza.m; sourceTree = "<group>"; };
+		84CBCA7F2386636D0078773D /* VeggiePizza.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VeggiePizza.h; sourceTree = "<group>"; };
+		84CBCA802386636D0078773D /* VeggiePizza.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VeggiePizza.m; sourceTree = "<group>"; };
+		84CBCA8223867AD20078773D /* HZCheesePizza.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZCheesePizza.h; sourceTree = "<group>"; };
+		84CBCA8323867AD20078773D /* HZCheesePizza.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZCheesePizza.m; sourceTree = "<group>"; };
+		84CBCA8523867ADC0078773D /* HZVeggiePizza.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZVeggiePizza.h; sourceTree = "<group>"; };
+		84CBCA8623867ADC0078773D /* HZVeggiePizza.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZVeggiePizza.m; sourceTree = "<group>"; };
+		84CBCA88238684610078773D /* SCCheesePizza.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCCheesePizza.h; sourceTree = "<group>"; };
+		84CBCA89238684610078773D /* SCCheesePizza.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCCheesePizza.m; sourceTree = "<group>"; };
+		84CBCA8B2386846E0078773D /* SCVeggiePizza.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCVeggiePizza.h; sourceTree = "<group>"; };
+		84CBCA8C2386846E0078773D /* SCVeggiePizza.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCVeggiePizza.m; sourceTree = "<group>"; };
+		84CBCA8F238687F20078773D /* PizzaMaterialAbstractFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PizzaMaterialAbstractFactory.h; sourceTree = "<group>"; };
+		84CBCA90238687F20078773D /* PizzaMaterialAbstractFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PizzaMaterialAbstractFactory.m; sourceTree = "<group>"; };
+		84CBCA92238689110078773D /* HZPizzaMaterialAbstractFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZPizzaMaterialAbstractFactory.h; sourceTree = "<group>"; };
+		84CBCA93238689110078773D /* HZPizzaMaterialAbstractFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZPizzaMaterialAbstractFactory.m; sourceTree = "<group>"; };
+		84CBCA9523868A280078773D /* SCPizzaMaterialAbstractFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCPizzaMaterialAbstractFactory.h; sourceTree = "<group>"; };
+		84CBCA9623868A280078773D /* SCPizzaMaterialAbstractFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCPizzaMaterialAbstractFactory.m; sourceTree = "<group>"; };
+		84CBCA9923868B850078773D /* Cheese.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cheese.h; sourceTree = "<group>"; };
+		84CBCA9A23868B850078773D /* Cheese.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Cheese.m; sourceTree = "<group>"; };
+		84CBCA9F23868D8B0078773D /* Veggie.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Veggie.h; sourceTree = "<group>"; };
+		84CBCAA023868D8B0078773D /* Veggie.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Veggie.m; sourceTree = "<group>"; };
+		84CBCAA223868EFE0078773D /* HZCheese.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZCheese.h; sourceTree = "<group>"; };
+		84CBCAA323868EFE0078773D /* HZCheese.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZCheese.m; sourceTree = "<group>"; };
+		84CBCAA523868FC40078773D /* SCVeggie.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCVeggie.h; sourceTree = "<group>"; };
+		84CBCAA623868FC40078773D /* SCVeggie.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCVeggie.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8453EA3523862BF500E23306 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8453EA5023862BF700E23306 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8453EA5B23862BF700E23306 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8453EA2F23862BF500E23306 = {
+			isa = PBXGroup;
+			children = (
+				8453EA3A23862BF500E23306 /* FactoryMode */,
+				8453EA5623862BF700E23306 /* FactoryModeTests */,
+				8453EA6123862BF700E23306 /* FactoryModeUITests */,
+				8453EA3923862BF500E23306 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8453EA3923862BF500E23306 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8453EA3823862BF500E23306 /* FactoryMode.app */,
+				8453EA5323862BF700E23306 /* FactoryModeTests.xctest */,
+				8453EA5E23862BF700E23306 /* FactoryModeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8453EA3A23862BF500E23306 /* FactoryMode */ = {
+			isa = PBXGroup;
+			children = (
+				8453EA7023862C0100E23306 /* Mode */,
+				8453EA3B23862BF500E23306 /* AppDelegate.h */,
+				8453EA3C23862BF500E23306 /* AppDelegate.m */,
+				8453EA3E23862BF500E23306 /* SceneDelegate.h */,
+				8453EA3F23862BF500E23306 /* SceneDelegate.m */,
+				8453EA4123862BF500E23306 /* ViewController.h */,
+				8453EA4223862BF500E23306 /* ViewController.m */,
+				8453EA4423862BF500E23306 /* Main.storyboard */,
+				8453EA4723862BF700E23306 /* Assets.xcassets */,
+				8453EA4923862BF700E23306 /* LaunchScreen.storyboard */,
+				8453EA4C23862BF700E23306 /* Info.plist */,
+				8453EA4D23862BF700E23306 /* main.m */,
+			);
+			path = FactoryMode;
+			sourceTree = "<group>";
+		};
+		8453EA5623862BF700E23306 /* FactoryModeTests */ = {
+			isa = PBXGroup;
+			children = (
+				8453EA5723862BF700E23306 /* FactoryModeTests.m */,
+				8453EA5923862BF700E23306 /* Info.plist */,
+			);
+			path = FactoryModeTests;
+			sourceTree = "<group>";
+		};
+		8453EA6123862BF700E23306 /* FactoryModeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8453EA6223862BF700E23306 /* FactoryModeUITests.m */,
+				8453EA6423862BF700E23306 /* Info.plist */,
+			);
+			path = FactoryModeUITests;
+			sourceTree = "<group>";
+		};
+		8453EA7023862C0100E23306 /* Mode */ = {
+			isa = PBXGroup;
+			children = (
+				84CBCA8E238687330078773D /* AbstractFactory */,
+				8453EA8523863D9C00E23306 /* Factory */,
+				8453EA7223863BAD00E23306 /* HZPizzaStore */,
+				8453EA7123863BA600E23306 /* SCPizzaStore */,
+			);
+			path = Mode;
+			sourceTree = "<group>";
+		};
+		8453EA7123863BA600E23306 /* SCPizzaStore */ = {
+			isa = PBXGroup;
+			children = (
+				8453EA7C23863D5300E23306 /* SCPizzaStore.h */,
+				8453EA7D23863D5300E23306 /* SCPizzaStore.m */,
+				84CBCA88238684610078773D /* SCCheesePizza.h */,
+				84CBCA89238684610078773D /* SCCheesePizza.m */,
+				84CBCA8B2386846E0078773D /* SCVeggiePizza.h */,
+				84CBCA8C2386846E0078773D /* SCVeggiePizza.m */,
+				84CBCA9523868A280078773D /* SCPizzaMaterialAbstractFactory.h */,
+				84CBCA9623868A280078773D /* SCPizzaMaterialAbstractFactory.m */,
+				84CBCAA523868FC40078773D /* SCVeggie.h */,
+				84CBCAA623868FC40078773D /* SCVeggie.m */,
+			);
+			path = SCPizzaStore;
+			sourceTree = "<group>";
+		};
+		8453EA7223863BAD00E23306 /* HZPizzaStore */ = {
+			isa = PBXGroup;
+			children = (
+				8453EA7923863D4C00E23306 /* HZPizzaStore.h */,
+				8453EA7A23863D4C00E23306 /* HZPizzaStore.m */,
+				84CBCA8223867AD20078773D /* HZCheesePizza.h */,
+				84CBCA8323867AD20078773D /* HZCheesePizza.m */,
+				84CBCA8523867ADC0078773D /* HZVeggiePizza.h */,
+				84CBCA8623867ADC0078773D /* HZVeggiePizza.m */,
+				84CBCA92238689110078773D /* HZPizzaMaterialAbstractFactory.h */,
+				84CBCA93238689110078773D /* HZPizzaMaterialAbstractFactory.m */,
+				84CBCAA223868EFE0078773D /* HZCheese.h */,
+				84CBCAA323868EFE0078773D /* HZCheese.m */,
+			);
+			path = HZPizzaStore;
+			sourceTree = "<group>";
+		};
+		8453EA8523863D9C00E23306 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				84CBCA7B238663410078773D /* Default */,
+				8453EA7323863BD300E23306 /* Pizza.h */,
+				8453EA7423863BD300E23306 /* Pizza.m */,
+				8453EA7623863BE000E23306 /* PizzaStore.h */,
+				8453EA7723863BE000E23306 /* PizzaStore.m */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		84CBCA7B238663410078773D /* Default */ = {
+			isa = PBXGroup;
+			children = (
+				84CBCA782386602C0078773D /* PizzaFactory.h */,
+				84CBCA792386602C0078773D /* PizzaFactory.m */,
+				84CBCA7C2386635F0078773D /* CheesePizza.h */,
+				84CBCA7D2386635F0078773D /* CheesePizza.m */,
+				84CBCA7F2386636D0078773D /* VeggiePizza.h */,
+				84CBCA802386636D0078773D /* VeggiePizza.m */,
+			);
+			path = Default;
+			sourceTree = "<group>";
+		};
+		84CBCA8E238687330078773D /* AbstractFactory */ = {
+			isa = PBXGroup;
+			children = (
+				84CBCA9823868B710078773D /* Material */,
+				84CBCA8F238687F20078773D /* PizzaMaterialAbstractFactory.h */,
+				84CBCA90238687F20078773D /* PizzaMaterialAbstractFactory.m */,
+			);
+			path = AbstractFactory;
+			sourceTree = "<group>";
+		};
+		84CBCA9823868B710078773D /* Material */ = {
+			isa = PBXGroup;
+			children = (
+				84CBCA9923868B850078773D /* Cheese.h */,
+				84CBCA9A23868B850078773D /* Cheese.m */,
+				84CBCA9F23868D8B0078773D /* Veggie.h */,
+				84CBCAA023868D8B0078773D /* Veggie.m */,
+			);
+			path = Material;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8453EA3723862BF500E23306 /* FactoryMode */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8453EA6723862BF700E23306 /* Build configuration list for PBXNativeTarget "FactoryMode" */;
+			buildPhases = (
+				8453EA3423862BF500E23306 /* Sources */,
+				8453EA3523862BF500E23306 /* Frameworks */,
+				8453EA3623862BF500E23306 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FactoryMode;
+			productName = FactoryMode;
+			productReference = 8453EA3823862BF500E23306 /* FactoryMode.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8453EA5223862BF700E23306 /* FactoryModeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8453EA6A23862BF700E23306 /* Build configuration list for PBXNativeTarget "FactoryModeTests" */;
+			buildPhases = (
+				8453EA4F23862BF700E23306 /* Sources */,
+				8453EA5023862BF700E23306 /* Frameworks */,
+				8453EA5123862BF700E23306 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8453EA5523862BF700E23306 /* PBXTargetDependency */,
+			);
+			name = FactoryModeTests;
+			productName = FactoryModeTests;
+			productReference = 8453EA5323862BF700E23306 /* FactoryModeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8453EA5D23862BF700E23306 /* FactoryModeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8453EA6D23862BF700E23306 /* Build configuration list for PBXNativeTarget "FactoryModeUITests" */;
+			buildPhases = (
+				8453EA5A23862BF700E23306 /* Sources */,
+				8453EA5B23862BF700E23306 /* Frameworks */,
+				8453EA5C23862BF700E23306 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8453EA6023862BF700E23306 /* PBXTargetDependency */,
+			);
+			name = FactoryModeUITests;
+			productName = FactoryModeUITests;
+			productReference = 8453EA5E23862BF700E23306 /* FactoryModeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8453EA3023862BF500E23306 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1120;
+				ORGANIZATIONNAME = "居然是村长";
+				TargetAttributes = {
+					8453EA3723862BF500E23306 = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
+					8453EA5223862BF700E23306 = {
+						CreatedOnToolsVersion = 11.2.1;
+						TestTargetID = 8453EA3723862BF500E23306;
+					};
+					8453EA5D23862BF700E23306 = {
+						CreatedOnToolsVersion = 11.2.1;
+						TestTargetID = 8453EA3723862BF500E23306;
+					};
+				};
+			};
+			buildConfigurationList = 8453EA3323862BF500E23306 /* Build configuration list for PBXProject "FactoryMode" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8453EA2F23862BF500E23306;
+			productRefGroup = 8453EA3923862BF500E23306 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8453EA3723862BF500E23306 /* FactoryMode */,
+				8453EA5223862BF700E23306 /* FactoryModeTests */,
+				8453EA5D23862BF700E23306 /* FactoryModeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8453EA3623862BF500E23306 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8453EA4B23862BF700E23306 /* LaunchScreen.storyboard in Resources */,
+				8453EA4823862BF700E23306 /* Assets.xcassets in Resources */,
+				8453EA4623862BF500E23306 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8453EA5123862BF700E23306 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8453EA5C23862BF700E23306 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8453EA3423862BF500E23306 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8453EA7B23863D4C00E23306 /* HZPizzaStore.m in Sources */,
+				84CBCA8A238684610078773D /* SCCheesePizza.m in Sources */,
+				84CBCA91238687F20078773D /* PizzaMaterialAbstractFactory.m in Sources */,
+				8453EA4323862BF500E23306 /* ViewController.m in Sources */,
+				84CBCA9723868A280078773D /* SCPizzaMaterialAbstractFactory.m in Sources */,
+				84CBCA7E2386635F0078773D /* CheesePizza.m in Sources */,
+				84CBCAA723868FC40078773D /* SCVeggie.m in Sources */,
+				8453EA7E23863D5300E23306 /* SCPizzaStore.m in Sources */,
+				84CBCAA423868EFE0078773D /* HZCheese.m in Sources */,
+				8453EA3D23862BF500E23306 /* AppDelegate.m in Sources */,
+				8453EA7823863BE000E23306 /* PizzaStore.m in Sources */,
+				8453EA4E23862BF700E23306 /* main.m in Sources */,
+				84CBCA7A2386602C0078773D /* PizzaFactory.m in Sources */,
+				84CBCA8D2386846E0078773D /* SCVeggiePizza.m in Sources */,
+				84CBCA8423867AD20078773D /* HZCheesePizza.m in Sources */,
+				84CBCA9B23868B850078773D /* Cheese.m in Sources */,
+				84CBCAA123868D8B0078773D /* Veggie.m in Sources */,
+				8453EA7523863BD300E23306 /* Pizza.m in Sources */,
+				84CBCA8723867ADC0078773D /* HZVeggiePizza.m in Sources */,
+				84CBCA812386636D0078773D /* VeggiePizza.m in Sources */,
+				84CBCA94238689110078773D /* HZPizzaMaterialAbstractFactory.m in Sources */,
+				8453EA4023862BF500E23306 /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8453EA4F23862BF700E23306 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8453EA5823862BF700E23306 /* FactoryModeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8453EA5A23862BF700E23306 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8453EA6323862BF700E23306 /* FactoryModeUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8453EA5523862BF700E23306 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8453EA3723862BF500E23306 /* FactoryMode */;
+			targetProxy = 8453EA5423862BF700E23306 /* PBXContainerItemProxy */;
+		};
+		8453EA6023862BF700E23306 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8453EA3723862BF500E23306 /* FactoryMode */;
+			targetProxy = 8453EA5F23862BF700E23306 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8453EA4423862BF500E23306 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8453EA4523862BF500E23306 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8453EA4923862BF700E23306 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8453EA4A23862BF700E23306 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8453EA6523862BF700E23306 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		8453EA6623862BF700E23306 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8453EA6823862BF700E23306 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TZUL3JZQ3E;
+				INFOPLIST_FILE = FactoryMode/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.juyiwei.FactoryMode;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8453EA6923862BF700E23306 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TZUL3JZQ3E;
+				INFOPLIST_FILE = FactoryMode/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.juyiwei.FactoryMode;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8453EA6B23862BF700E23306 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TZUL3JZQ3E;
+				INFOPLIST_FILE = FactoryModeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.juyiwei.FactoryModeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FactoryMode.app/FactoryMode";
+			};
+			name = Debug;
+		};
+		8453EA6C23862BF700E23306 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TZUL3JZQ3E;
+				INFOPLIST_FILE = FactoryModeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.juyiwei.FactoryModeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FactoryMode.app/FactoryMode";
+			};
+			name = Release;
+		};
+		8453EA6E23862BF700E23306 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TZUL3JZQ3E;
+				INFOPLIST_FILE = FactoryModeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.juyiwei.FactoryModeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FactoryMode;
+			};
+			name = Debug;
+		};
+		8453EA6F23862BF700E23306 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TZUL3JZQ3E;
+				INFOPLIST_FILE = FactoryModeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.juyiwei.FactoryModeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FactoryMode;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8453EA3323862BF500E23306 /* Build configuration list for PBXProject "FactoryMode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8453EA6523862BF700E23306 /* Debug */,
+				8453EA6623862BF700E23306 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8453EA6723862BF700E23306 /* Build configuration list for PBXNativeTarget "FactoryMode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8453EA6823862BF700E23306 /* Debug */,
+				8453EA6923862BF700E23306 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8453EA6A23862BF700E23306 /* Build configuration list for PBXNativeTarget "FactoryModeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8453EA6B23862BF700E23306 /* Debug */,
+				8453EA6C23862BF700E23306 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8453EA6D23862BF700E23306 /* Build configuration list for PBXNativeTarget "FactoryModeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8453EA6E23862BF700E23306 /* Debug */,
+				8453EA6F23862BF700E23306 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8453EA3023862BF500E23306 /* Project object */;
+}
